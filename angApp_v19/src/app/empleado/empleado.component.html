@@ -1,8 +1,18 @@
-<strong>Empleado Estrella</strong>
-<ul>
-    <li>{{empleado.nombre}}</li>
-</ul>
-
-<ul>
-    <li>{{trabajador[0].nombre}}</li>
-</ul>
+    <h2>Empleados</h2>
+    <ul>
+      @if (trabajadorExterno){
+        <button (click)="cambiarExterno(false)">Mostrar Internos</button>
+        <li>{{ empleadoExt.nombre }}</li>
+      }@else {
+        <button (click)="cambiarExterno(true)">Mostrar Externos</button>
+        <li>Lista de Trabajadores Internas</li>
+        <li>{{ trabajador[0].nombre }}</li>
+        <li>{{ trabajador[1].nombre }}</li>
+        <li>{{ trabajador[2].nombre }}</li>
+      }
+    </ul>
+  
+    <h2>Empleados Contratados</h2>
+    <ul>
+        
+    </ul>
