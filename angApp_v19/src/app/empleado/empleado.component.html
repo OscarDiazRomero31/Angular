@@ -11,8 +11,8 @@
         <li>{{ trabajador[2].nombre }}</li>
       }
     </ul>
-  
-    <h2>Empleados Contratados</h2>
-    <ul>
-        
-    </ul>
+
+    @for (empleado of trabajador; track empleado.id; let index = $index) {
+      <p>Empleado {{index+1}}</p>
+      <li>{{ empleado.nombre }}</li>
+    }

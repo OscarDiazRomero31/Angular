@@ -1,0 +1,46 @@
+<div class="contenedor">
+    <h2>Alumnado Matriculado en DAW</h2>
+    
+    <div class="botones">
+      <button (click)="cargarAlumnado(1)">Cargar 1º DAW</button>
+      <button (click)="cargarAlumnado(2)">Cargar 2º DAW</button>
+    </div>
+  
+    @if (alumnadoFiltrado.length > 0) {
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>DNI</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Población</th>
+            <th>Teléfono</th>
+            <th>Módulos Matriculados</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (alumno of alumnadoFiltrado; track alumno.dni) {
+            <tr>
+              <td>{{ alumno.nombre }}</td>
+              <td>{{ alumno.apellidos }}</td>
+              <td>{{ alumno.dni }}</td>
+              <td>{{ alumno.fechaNacimiento }}</td>
+              <td>{{ alumno.poblacion }}</td>
+              <td>{{ alumno.telefono }}</td>
+              <td>
+                <ul>
+                  @for (modulo of alumno.modulos; track modulo) {
+                    <li>{{ modulo }}</li>
+                  }
+                </ul>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <p>No hay alumnos cargados.</p>
+    }
+  </div>
+  
