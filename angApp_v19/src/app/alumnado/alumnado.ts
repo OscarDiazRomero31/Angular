@@ -6,7 +6,7 @@ export class Alumno{
         public fechaNacimiento: string,
         public poblacion: string,
         public telefono: string,
-        public curso: number, // 1 o 2 (Primero o Segundo)
+        public curso: number,
         public modulos: string[]
     )   {}
 }

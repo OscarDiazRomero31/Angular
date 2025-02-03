@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Alumno } from './alumnado';
 
 @Component({
   selector: 'app-alumnado',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './alumnado.component.html',
   styleUrl: './alumnado.component.css'
 })
